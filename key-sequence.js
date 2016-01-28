@@ -1,8 +1,8 @@
 function KeySequenceHandler (sequences, keys) {
-    this.sequences = (sequences === undefined) ? [] : sequences;
+    this.sequences = sequences;
     this.keys = (keys === undefined) ? [] : keys;
 
-    if (this.keys.length == 0) this.build()
+    if (this.keys.length === 0) this.build();
     this.init();
 }
 KeySequenceHandler.prototype.init = function () {
@@ -32,8 +32,8 @@ KeySequenceHandler.prototype.build = function () {
 };
 
 function KeySequence (sequence, func) {
-    this.sequence = (sequence === undefined) ? [] : sequence;
-    this.func = (func === undefined) ? function () {} : func;
+    this.sequence = sequence;
+    this.func = (func === undefined) ? Function.prototype : func; // noop?
     this.position = 0;
 }
 KeySequence.prototype.poll = function (keyCode) {
