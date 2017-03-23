@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>key-sequence-handler</title>
+<head>
+  <meta charset="utf-8">
+  <title>key-sequence</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-        <style media="screen">
-            body { background: whitesmoke; font-size: 62.5%; }
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <style media="screen">
+    * { box-sizing: border-box; }
+    body { background: whitesmoke; font-size: 62.5%; line-height: 2.3em; }
+    h1 { font-size: 3.7em; font-weight: normal; }
+    h2 { font-size: 2.3em; font-weight: normal; }
+    p { font-size: 1.4em; }
 
-            h1 {
-                font-size: 1.8em;
-                font-weight: normal;
-            }
-            p { font-size: 1.4em; }
-            p.oomph { text-transform: uppercase; }
+    main {
+      margin: 0 auto;
+      max-width: 50em;
+      color: #39393e;
+      font-family: 'Lato', 'Verdana', sans-serif;
+    }
 
-            main {
-                max-width: 500px;
-                margin: 0 auto;
-                color: #4E4E4E;
-                font-family: 'Lato', 'Verdana', sans-serif;
-            }
-            
-            ul {
-                padding-left: 0;
-            }
-            li {
-                display: inline-block;
-                line-height: 0.5em;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
+    .key {
+      display: inline-block;
+      padding: calc(1em / 3);
+      min-width: 1.875em;
+      border-radius: 3px;
+      background: rgba(200, 198, 194, 1);
+      box-shadow: inset 0 -1px 3px rgba(52, 52, 50, 0.1), inset 0 2px rgba(255, 255, 255, 0.3), inset 0 1px rgba(166, 164, 159, 0.3);
+      text-align: center;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
 
-        <main>
-            <h1>Give it a try. Press the following sequences:</h1>
-            <ul>
-                <li><p class="oomph">up - down - up - down</p></li>
-				<li><p class="oomph">left - right - left - right</p></li>
-            </ul>
-        </main>
+  <main>
+    <h1>Give it a try!</h1>
+    <p>
+      <span class="key">&uarr;</span>
+      <span class="key">&darr;</span>
+      <span class="key">&uarr;</span>
+      <span class="key">&darr;</span>
+    </p>
+    <p>
+      <span class="key">&larr;</span>
+      <span class="key">&rarr;</span>
+      <span class="key">&larr;</span>
+      <span class="key">&rarr;</span>
+    </p>
+  </main>
 
-		<script src="./key-sequence.js" charset="utf-8"></script>
-		<script src="./main.js" charset="utf-8"></script>
-    </body>
+  <script src="./key-sequence.js" charset="utf-8"></script>
+  <script src="./main.js" charset="utf-8"></script>
+</body>
 </html>
